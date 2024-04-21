@@ -1,5 +1,23 @@
-@use "sass:meta";
+@use 'sass:meta';
 
 @layer reset {
-  @include meta.load-css("~normalize.css/normalize.css")
+  @layer {
+    @include meta.load-css('~normalize.css/normalize.css');
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    min-width: 0;
+  }
 }

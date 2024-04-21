@@ -1,0 +1,40 @@
+@use 'utils';
+
+@layer theme {
+  :root {
+    --yellow: hsl(47deg, 89%, 63%);
+    --black: hsl(0deg, 0%, 7%);
+    --white: hsl(0deg, 0%, 100%);
+    --grey: hsl(0deg, 0%, 50%);
+
+    --font-size-xs: #{utils.pxToRem(12px)};
+    --font-size-s: #{utils.pxToRem(14px)};
+    --font-size-m: #{utils.pxToRem(16px)};
+    --font-size-l: #{utils.pxToRem(20px)};
+    --font-size-xl: #{utils.pxToRem(24px)};
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-extra-bold: 800;
+  }
+
+  @font-face {
+    font-family: 'Figtree';
+    src: url('/src/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Figtree';
+    src: url('/src/assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 800;
+    font-style: italic;
+  }
+}
+
+@mixin font-stack() {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  line-height: 150%;
+}
